@@ -1,1 +1,14 @@
+venv/
+.idea/
+
 frontend/node_modules/
+frontend/package-lock.json
+
+backend/.env
+backend/alembic.ini
+backend/__pycache__/
+backend/routers/__pycache__/admin.cpython-311.pyc
+backend/routers/__pycache__/intake.cpython-311.pyc
+backend/routers/__pycache__/staff.cpython-311.pyc
+backend/.pytest_cache
+backend/test
