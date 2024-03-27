@@ -4,13 +4,13 @@ import sys
 sys.path.append("..")
 
 from fastapi import Depends, APIRouter
-import backend.models as models
+import models as models
 from pydantic import BaseModel
-from backend.database import engine, SessionLocal
+from database import engine, SessionLocal
 from typing import Optional
 from sqlalchemy.orm import Session
 from starlette import status
-from backend.routers.auth import get_user_exception
+from routers.auth import get_user_exception
 
 
 router = APIRouter(

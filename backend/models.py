@@ -1,4 +1,4 @@
-from sqlalchemy import Boolean, Column, Integer, String, Date
+from sqlalchemy import Boolean, Column, Integer, String, Date, BigInteger
 from sqlalchemy.orm import relationship
 from database import Base
 from datetime import datetime
@@ -16,12 +16,12 @@ class Registration(Base):
     lastName = Column(String)
     preferredName = Column(String)
     email = Column(String)
-    mobile = Column(Integer)
-    homeNumber = Column(Integer)
+    mobile = Column(BigInteger)
+    homeNumber = Column(BigInteger)
     birthDate = Column(Date)
     age = Column(Integer)
     gender = Column(String)
-    healthCareNumber = Column(Integer)
+    healthCareNumber = Column(BigInteger)
     street = Column(String)
     apt = Column(Integer)
     city = Column(String)
@@ -31,7 +31,7 @@ class Registration(Base):
     relation = Column(String)
     emergencyContactName = Column(String)
     emergencyContactEmail = Column(String)
-    emergencyContactNumber = Column(Integer)
+    emergencyContactNumber = Column(BigInteger)
     currentDate = Column(Date, default=datetime.now())
     symptoms = Column(String)
     isDiabetesMellitus = Column(Boolean)
@@ -90,7 +90,7 @@ class Staff(Base):
     firstName = Column(String)
     middleName = Column(String)
     lastName = Column(String)
-    contactNumber = Column(Integer)
+    contactNumber = Column(BigInteger)
     email = Column(String, unique=True)
     street = Column(String)
     apt = Column(Integer)

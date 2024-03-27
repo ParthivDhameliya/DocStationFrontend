@@ -5,10 +5,10 @@ sys.path.append("..")
 from fastapi import Depends, HTTPException, status, APIRouter
 from pydantic import BaseModel
 from typing import Optional
-import backend.models as models
+import models as models
 from passlib.context import CryptContext
 from sqlalchemy.orm import Session
-from backend.database import SessionLocal, engine
+from database import SessionLocal, engine
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from datetime import datetime, timedelta
 from jose import jwt, JWTError
